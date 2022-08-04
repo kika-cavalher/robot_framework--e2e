@@ -6,26 +6,44 @@ Resource                        keywords.robot
 Test Setup                      Start Session
 Test Teardown                   End Session
 
-#robot -d ./Front/logs -i inv_email ./Front/test/register/register.robo
+##robot -d ./Front/logs ./Front/tests/register/register.robot
 *Test Cases*
 Create new user
     [Tags]                      happy
 
+    &{user}                     Create Dictionary
+    ...                         name=Jedi Cavalher
+    ...                         email=Jedi@test.com
+    ...                         ordem=Jedi
+    ...                         tpjedi=Cavaleiro Jedi 
+    ...                         bdate=abril-1993-19
+    ...                         instagram=@jedi-cavalher
+
     Go To User Form
-    Fill User Form              Jedi Cavalher        Jedi@test.com        Jedi          abril-1993-19               @jedi-cavalher
-    Select Jedi                 Cavaleiro Jedi 
+    Fill User Form              ${user}
+    Select Jedi                 ${user}
     Check Accept comunications
     Submit User Form
-    Toaster Message Should Be  Usuário cadastrado com sucesso!  
+    Toaster Message Should Be  Usuário cadastrado com sucesso!
   
 Incorrect e-mail
     [Tags]                      inv_email
 
+    &{user}                     Create Dictionary
+    ...                         name=Dath Cavalher
+    ...                         email=Dath-test.com
+    ...                         ordem=Jedi
+    ...                         tpjedi=Cavaleiro Jedi 
+    ...                         bdate=abril-1993-19
+    ...                         instagram=@dath-cavalher
+
     Go To User Form
-    Fill User Form              Jedi Cavalher        Jedi$test.com        Jedi          abril-1993-19               @jedi-cavalher
-    Select Jedi                 Cavaleiro Jedi 
+    Fill User Form              ${user}
+    Select Jedi                 ${user}
     Check Accept comunications
     Submit User Form
-    Toaster Message Should Be  Oops! O email é incorreto.   
+    Toaster Message Should Be  Oops! O email é incorreto.
+
+
  
 
