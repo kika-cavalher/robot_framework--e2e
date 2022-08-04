@@ -6,7 +6,7 @@ Library                         String
 *Keywords*
 Start Session
     New Browser                 chromium                                    headless=False
-    New Page                    https://yodapp.vercel.app/
+    New Page                    https://yodapp-testing.vercel.app/
 
 End Session
     take Screenshot
