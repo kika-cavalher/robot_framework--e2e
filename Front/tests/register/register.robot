@@ -20,7 +20,9 @@ Create new user
     Select Jedi                 ${user}
     Check Accept comunications
     Submit User Form
-    Toaster Message Should Be  Usuário cadastrado com sucesso!
+    Toaster Message Should Be   Usuário cadastrado com sucesso!
+    Go To Home Page
+    User Should Be Visible      ${user}
   
 Incorrect e-mail
     [Tags]                      inv_email
@@ -33,6 +35,7 @@ Incorrect e-mail
     Check Accept comunications
     Submit User Form
     Toaster Message Should Be  Oops! O email é incorreto.
+
 
 
  

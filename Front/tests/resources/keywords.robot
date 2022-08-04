@@ -3,10 +3,13 @@ Documentation                   Keywords to use in tests
 library                         Browser
 Library                         String
 
+*Variables*
+${BASE_URL}                     https://yodapp-testing.vercel.app/
+
 *Keywords*
 Start Session
     New Browser                 chromium                                    headless=False
-    New Page                    https://yodapp-testing.vercel.app/
+    New Page                    ${BASE_URL}
 
 End Session
     take Screenshot
