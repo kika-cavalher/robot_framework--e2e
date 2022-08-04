@@ -28,8 +28,10 @@ Submit User Form
 
 Toaster Message Should Be
     [Arguments]                     ${msg}
-        Wait For Elements State     css=.toast div >> text=${msg}    
-    ...                             visible    
+    ${element}                      Set Variable                            css=.toast div
+
+        Wait For Elements State     ${element}                              visible                         5
+        Get Text                    ${element}                              equal                           ${msg}                                                               
 
 Select Birth Date
     [Arguments]                     ${text_date}
