@@ -8,6 +8,6 @@
 
 <p align="center">
   <kbd>
-    <img width="250" style="border-radius: 5px" height="450" src="../Front/logs/20220805_180552.gif" alt="preview">
+    <img width="250" style="border-radius: 5px" height="450" src="../Front/20220805_180552.gif" alt="preview">
   </kbd>
 </p>
