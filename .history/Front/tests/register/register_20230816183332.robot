@@ -6,6 +6,7 @@ Documentation                   Suite to test new user registration.
 Library                         ../resources/factories/users.py
 Resource                        ../resources/keywords.robot
 Resource                        ./meta.robot
+Resource                        ./data.robot
 
 Test Setup                      Start Session
 Test Teardown                   End Session
