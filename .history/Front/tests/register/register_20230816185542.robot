@@ -7,7 +7,7 @@
 Documentation                   Suite to test new user registration.
 
 Library                         ../../factories/users.py
-Resource                        ../default/keywords.robot
+Resource                        ../default
 Resource                        ./meta.robot
 
 Test Setup                      Start Session
