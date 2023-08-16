@@ -1,14 +1,14 @@
-#robot -d ./Front/logs Front/tests/register/register.robot
-#robot -d ./Front/logs -i happy Front/tests/register/register.robot             executa somente a tag informada
-#robot -d ./Front/logs -e happy Front/tests/register/register.robot         não executa somente a tag informada
-#robot -d ./Front/logs -i inv_email Front/tests/register/register.robot
+#robot -d ./Front/.logs Front/tests/
+#robot -d ./Front/.logs -i happy Front/tests/             executa somente a tag informada
+#robot -d ./Front/.logs -e happy Front/tests/         não executa somente a tag informada
+#robot -d ./Front/.logs -i inv_email Front/tests/
 
 *** Settings ***
 Documentation                   Suite to test new user registration.
 
-Library                         ../../factories/users.py
-Resource                        ../default/keywords.robot
-Resource                        ./meta.robot
+Library                         ../factories/users.py
+Resource                        ../resources/default/base.robot
+Resource                        ../resources/register/meta.robot
 
 Test Setup                      Start Session
 Test Teardown                   End Session
@@ -17,7 +17,8 @@ Test Teardown                   End Session
 Create new user
     [Tags]                      happy
     #Define qual lista de dados vai usar selecionando a função desejada aqui
-    &{user}                     factory user successfully
+    ${user}                     factory user successfully
+    # o & significa que é uma super variavel, uma lista. 
 
     Go To User Form
     Fill User Form              ${user}
@@ -31,7 +32,7 @@ Create new user
   
 Incorrect e-mail
     [Tags]                      inv_email
-    &{user}                     factory user wrong email
+    ${user}                     factory user wrong email
 
     Go To User Form
     Fill User Form              ${user}

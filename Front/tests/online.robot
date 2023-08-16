@@ -1,10 +1,10 @@
-#robot -d ./Front/logs ./Front/tests/default/online.robot
+#robot -d ./Front/.logs Front/tests/
 
 *Settings*
 Documentation                   Suite to check if app is online
 
 Library                         Browser
-Resource                        ./keywords.robot
+Resource                        ../resources/default/base.robot
 Test Setup                      Start Session
 Test Teardown                   End Session
 
