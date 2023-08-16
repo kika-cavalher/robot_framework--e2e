@@ -23,7 +23,6 @@ ${fld_select_month}             xpath=(//header[@class="datepicker-header"]//sel
 ${fld_select_year}              xpath=(//header[@class="datepicker-header"]//select)[2]
 #${fld_select_day}               xpath=//a[contains(@class, "datepicker-cell")]//span[text()="${date}[2]"]
 
-
 #Validate
 ${txt message}                  css=.toast div
 #${txt_correct_user}             xpath=//td[contains(text(), "${user}[email]")]/..
