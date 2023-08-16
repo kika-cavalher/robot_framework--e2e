@@ -29,6 +29,7 @@ Create new user
   
 Incorrect e-mail
     [Tags]                      inv_email
+
     &{user}                     factory user wrong email
 
     Go To User Form
@@ -37,3 +38,8 @@ Incorrect e-mail
     Check Accept comunications
     Submit User Form
     Toaster Message Should Be  Oops! O email é incorreto.
+
+
+
+ 
+

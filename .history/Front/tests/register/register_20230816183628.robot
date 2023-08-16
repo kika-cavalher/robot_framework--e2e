@@ -37,3 +37,8 @@ Incorrect e-mail
     Check Accept comunications
     Submit User Form
     Toaster Message Should Be  Oops! O email é incorreto.
+
+
+
+ 
+
