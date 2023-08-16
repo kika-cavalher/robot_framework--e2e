@@ -74,7 +74,7 @@ User Should Be Visible
     Get Text                        ${element}                              contains                        ${user}[instagram]
 
 
-#tirar print do código HTML no momento em que precisa(bom para elmt que somem com o tempo)
+#tirar print do código HTML no momento em que precisa(bom para elemento que somem com o tempo)
     # Sleep                       1
     # ${html}                     Get Page Source
     # Log                         ${html}  
