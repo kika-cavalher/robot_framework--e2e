@@ -50,8 +50,9 @@ Select Birth Date
     [Arguments]                     ${text_date}
     #Aqui está criando uma variavél que será definido o valor quando usado o arquivo que puxa esse metodo.
 
-    @{date}                         Split String                                                            ${text_date}                                                            -
+    @{date}                         Split String                                                            ${text_date}                                  -
     #Esse metodo é preciso pois na aplicação não é possível digitar a data somente selecionar numa pop-up de calendário. 
+    # @ significa lista. 
 
     Click                           ${fld_data_nascimento}  
     # Primeiro clica no input para abrir o calendário. 

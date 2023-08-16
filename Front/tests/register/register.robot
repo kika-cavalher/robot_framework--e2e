@@ -1,9 +1,9 @@
-#robot -d ./logs Front/tests/register/register.robot
-#robot -d ./logs -i happy Front/tests/register/register.robot             executa somente a tag informada
-#robot -d ./logs -e happy Front/tests/register/register.robot         não executa somente a tag informada
-#robot -d ./logs -i inv_email Front/tests/register/register.robot
+#robot -d ./Front/logs Front/tests/register/register.robot
+#robot -d ./Front/logs -i happy Front/tests/register/register.robot             executa somente a tag informada
+#robot -d ./Front/logs -e happy Front/tests/register/register.robot         não executa somente a tag informada
+#robot -d ./Front/logs -i inv_email Front/tests/register/register.robot
 
-*Settings*
+*** Settings ***
 Documentation                   Suite to test new user registration.
 
 Library                         ../../factories/users.py
@@ -13,8 +13,7 @@ Resource                        ./meta.robot
 Test Setup                      Start Session
 Test Teardown                   End Session
 
-##robot -d ./Front/logs ./Front/tests/register/register.robot
-*Test Cases*
+*** Test Cases ***
 Create new user
     [Tags]                      happy
     #Define qual lista de dados vai usar selecionando a função desejada aqui

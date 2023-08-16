@@ -1,4 +1,4 @@
- 
+#robot -d ./Front/logs ./Front/tests/default/online.robot
 
 *Settings*
 Documentation                   Suite to check if app is online
