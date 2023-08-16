@@ -2,7 +2,7 @@
 Documentation                       Suite with keyword for register test
 
 Library                             Browser
-Library                             String
+Library    String
 Resource                            ./data.robot
 
 

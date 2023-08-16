@@ -1,10 +1,8 @@
 *** Settings ***
 Documentation                       Suite with keyword for register test
 
-Library                             Browser
-Library                             String
 Resource                            ./data.robot
-
+Library        abc        
 
 *** Keywords ***
 Go To Home Page

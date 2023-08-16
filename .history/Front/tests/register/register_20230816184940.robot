@@ -1,7 +1,6 @@
 #robot -d ./logs Front/tests/register/register.robot
-#robot -d ./logs -i happy Front/tests/register/register.robot             executa somente a tag informada
-#robot -d ./logs -e happy Front/tests/register/register.robot         não executa somente a tag informada
-#robot -d ./logs -i inv_email Front/tests/register/register.robot
+#robot -d ./logs -i happy Front/tests/register/register.robot
+#robot -d ./logs -i happy Front/tests/register/register.robot
 
 *Settings*
 Documentation                   Suite to test new user registration.
