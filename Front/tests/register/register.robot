@@ -1,10 +1,13 @@
+#robot -d ./logs Front/tests/register/register.robot
+
 *Settings*
 Documentation                   Suite to test new user registration.
 
 Library                         ${EXECDIR}/Front/tests/resources/factories/users.py
-
 Resource                        ${EXECDIR}/Front/tests/resources/keywords.robot
-Resource                        keywords.robot
+Resource                        meta.robot
+Resource                        data.robot
+
 Test Setup                      Start Session
 Test Teardown                   End Session
 
@@ -13,10 +16,12 @@ Test Teardown                   End Session
 Create new user
     [Tags]                      happy
 
+    #Define qual lista de dados vai usar selecionando a função desejada aqui
     &{user}                     factory user successfully
 
     Go To User Form
     Fill User Form              ${user}
+    #Precisa passar que a lista de user que carregou será usado nesse metodo, como definido na criação do mesmo. 
     Select Jedi                 ${user}
     Check Accept comunications
     Submit User Form

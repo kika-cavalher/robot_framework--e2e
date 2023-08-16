@@ -29,3 +29,4 @@ Have you installed the latest version of:
 * Node 
 * Python 
 * Robot Framework
+* robotframework-browser

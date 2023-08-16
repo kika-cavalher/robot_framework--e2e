@@ -1,9 +1,13 @@
+ 
+
 *Settings*
 Documentation                   Suite to check if app is online
 
-Resource                        ${EXECDIR}/Front/tests/resources/keywords.robot
+Library                         Browser
+Resource                        ${EXECDIR}/resources/keywords.robot
 Test Setup                      Start Session
 Test Teardown                   End Session
+
 
 *Test Cases*
 Must be online

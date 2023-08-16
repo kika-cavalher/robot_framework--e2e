@@ -8,7 +8,7 @@ ${BASE_URL}                     https://yodapp-testing.vercel.app/
 
 *Keywords*
 Start Session
-    New Browser                 chromium                                    headless=False
+    New Browser                 chromium                                    headless=False                slowMo=00:00:01
     New Page                    ${BASE_URL}
 
 End Session
@@ -16,3 +16,6 @@ End Session
 
 
 #slowMo=00:00:01
+#chromium
+#firefox
+#webkit
